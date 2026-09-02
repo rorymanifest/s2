@@ -8,20 +8,20 @@
 <!--
   =============================================================================
   IMAGES THIS PAGE EXPECTS  (drop real files at these exact paths)
-  Repo layout assumed:  /index.html  +  /public/images/*
+  Repo layout assumed:  /index.html  +  /images/*
   -----------------------------------------------------------------------------
-    public/images/hero.jpg              hero background (window cleaner + pole)
-    public/images/window.png            service card – window cleaning
-    public/images/pressure.png          service card – pressure washing
-    public/images/gutter.png            service card – gutter cleaning
-    public/images/window-before.jpg     gallery – window before
-    public/images/window-after.jpg      gallery – window after
-    public/images/pressure-before.jpg   gallery – pressure before
-    public/images/pressure-after.jpg    gallery – pressure after
-    public/images/gutter-before.jpg     gallery – gutter before
-    public/images/gutter-after.jpg      gallery – gutter after
+    images/hero.jpg              hero background (window cleaner + pole)
+    images/window.png            service card – window cleaning
+    images/pressure.png          service card – pressure washing
+    images/gutter.png            service card – gutter cleaning
+    images/window-before.jpg     gallery – window before
+    images/window-after.jpg      gallery – window after
+    images/pressure-before.jpg   gallery – pressure before
+    images/pressure-after.jpg    gallery – pressure after
+    images/gutter-before.jpg     gallery – gutter before
+    images/gutter-after.jpg      gallery – gutter after
   -----------------------------------------------------------------------------
-  PATHS: relative "public/images/x" works for a plain static site on Vercel
+  PATHS: relative "images/x" works for a plain static site on Vercel
   AND in VS Code Live Preview. If you later move to Next.js/Vite, change every
   src to "/images/x" (the public/ folder becomes the web root there).
   =============================================================================
@@ -87,7 +87,7 @@
 
   <section id="home" style="position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;background:#0c2031">
     <div style="position:absolute;inset:0">
-      <img class="img-slot" src="public/images/hero.jpg" alt="Window cleaner using a water-fed pole on a Melbourne home">
+      <img class="img-slot" src="images/hero.jpg" alt="Window cleaner using a water-fed pole on a Melbourne home">
     </div>
     <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(100deg, rgba(12,32,49,0.92) 0%, rgba(12,32,49,0.68) 45%, rgba(12,32,49,0.2) 78%, rgba(12,32,49,0) 100%)"></div>
     <div style="position:absolute;left:0;right:0;bottom:0;height:160px;pointer-events:none;background:linear-gradient(to top,#f6fafc,rgba(246,250,252,0))"></div>
@@ -134,7 +134,7 @@
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
         <a href="#quote" style="position:relative;border-radius:26px;overflow:hidden;border:1px solid #3092cf;box-shadow:0 20px 50px -20px rgba(48,146,207,0.45);display:block">
           <div style="position:relative;height:420px">
-            <img class="img-slot" src="public/images/window.png" alt="Window cleaning in progress">
+            <img class="img-slot" src="images/window.png" alt="Window cleaning in progress">
             <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top, rgba(12,32,49,0.93) 0%, rgba(12,32,49,0.45) 45%, rgba(12,32,49,0) 80%)"></div>
             <span style="position:absolute;top:16px;left:16px;background:#3092cf;color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;padding:6px 12px;border-radius:999px">Our speciality</span>
             <div style="position:absolute;left:0;right:0;bottom:0;padding:24px">
@@ -146,7 +146,7 @@
         </a>
         <a href="#quote" style="position:relative;border-radius:26px;overflow:hidden;border:1px solid #dbe6ee;display:block">
           <div style="position:relative;height:420px">
-            <img class="img-slot" src="public/images/blast.png" alt="Pressure washing a driveway">
+            <img class="img-slot" src="images/blast.png" alt="Pressure washing a driveway">
             <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top, rgba(12,32,49,0.93) 0%, rgba(12,32,49,0.45) 45%, rgba(12,32,49,0) 80%)"></div>
             <div style="position:absolute;left:0;right:0;bottom:0;padding:24px">
               <h3 style="font-family:Archivo,sans-serif;color:#fff;font-size:24px;font-weight:700;margin:0 0 8px">Pressure Washing</h3>
@@ -157,7 +157,7 @@
         </a>
         <a href="#quote" style="position:relative;border-radius:26px;overflow:hidden;border:1px solid #dbe6ee;display:block">
           <div style="position:relative;height:420px">
-            <img class="img-slot" src="public/images/gutter.png" alt="Gutter cleaning on a roofline">
+            <img class="img-slot" src="images/gutter.png" alt="Gutter cleaning on a roofline">
             <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top, rgba(12,32,49,0.93) 0%, rgba(12,32,49,0.45) 45%, rgba(12,32,49,0) 80%)"></div>
             <div style="position:absolute;left:0;right:0;bottom:0;padding:24px">
               <h3 style="font-family:Archivo,sans-serif;color:#fff;font-size:24px;font-weight:700;margin:0 0 8px">Gutter Cleaning</h3>
@@ -217,11 +217,11 @@
         <div data-cat="window" style="background:#fff;border:1px solid #dbe6ee;border-radius:26px;overflow:hidden">
           <div style="display:grid;grid-template-columns:1fr 1fr">
             <div style="position:relative;height:224px;min-width:0;overflow:hidden">
-              <img class="img-slot" src="public/images/window-before.jpg" alt="Window before cleaning">
+              <img class="img-slot" src="images/window-before.jpg" alt="Window before cleaning">
               <span style="position:absolute;top:8px;left:8px;background:rgba(246,250,252,0.85);color:#0c2031;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:2px 8px;border-radius:4px">Before</span>
             </div>
             <div style="position:relative;height:224px;min-width:0;overflow:hidden">
-              <img class="img-slot" src="public/images/window-after.jpg" alt="Window after cleaning">
+              <img class="img-slot" src="images/window-after.jpg" alt="Window after cleaning">
               <span style="position:absolute;top:8px;left:8px;background:#3092cf;color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:2px 8px;border-radius:4px">After</span>
             </div>
           </div>
@@ -234,11 +234,11 @@
         <div data-cat="pressure" style="background:#fff;border:1px solid #dbe6ee;border-radius:26px;overflow:hidden">
           <div style="display:grid;grid-template-columns:1fr 1fr">
             <div style="position:relative;height:224px;min-width:0;overflow:hidden">
-              <img class="img-slot" src="public/images/pressure-before.jpg" alt="Driveway before pressure washing">
+              <img class="img-slot" src="images/pressure-before.jpg" alt="Driveway before pressure washing">
               <span style="position:absolute;top:8px;left:8px;background:rgba(246,250,252,0.85);color:#0c2031;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:2px 8px;border-radius:4px">Before</span>
             </div>
             <div style="position:relative;height:224px;min-width:0;overflow:hidden">
-              <img class="img-slot" src="public/images/pressure-after.jpg" alt="Driveway after pressure washing">
+              <img class="img-slot" src="images/pressure-after.jpg" alt="Driveway after pressure washing">
               <span style="position:absolute;top:8px;left:8px;background:#3092cf;color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:2px 8px;border-radius:4px">After</span>
             </div>
           </div>
@@ -251,11 +251,11 @@
         <div data-cat="gutter" style="background:#fff;border:1px solid #dbe6ee;border-radius:26px;overflow:hidden">
           <div style="display:grid;grid-template-columns:1fr 1fr">
             <div style="position:relative;height:224px;min-width:0;overflow:hidden">
-              <img class="img-slot" src="public/images/gutter-before.jpg" alt="Gutter before cleaning">
+              <img class="img-slot" src="images/gutter-before.jpg" alt="Gutter before cleaning">
               <span style="position:absolute;top:8px;left:8px;background:rgba(246,250,252,0.85);color:#0c2031;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:2px 8px;border-radius:4px">Before</span>
             </div>
             <div style="position:relative;height:224px;min-width:0;overflow:hidden">
-              <img class="img-slot" src="public/images/gutter-after.jpg" alt="Gutter after cleaning">
+              <img class="img-slot" src="images/gutter-after.jpg" alt="Gutter after cleaning">
               <span style="position:absolute;top:8px;left:8px;background:#3092cf;color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:2px 8px;border-radius:4px">After</span>
             </div>
           </div>
