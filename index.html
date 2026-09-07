@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Skyway Cleaning — Melbourne's hard to reach window specialists</title>
+<link rel="icon" type="image/png" href="/images/favicon.png">
 
 <!--
   =============================================================================
@@ -59,6 +60,10 @@
   .field             { transition: border-color .15s ease; }
   .field:focus       { border-color:#175b8c; outline:none; }
 
+  /* Nav bar: translucent over the dark hero, solid once scrolled past it so the logo stays visible */
+  .nav-bar { background:rgba(255,255,255,0.10); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.22); transition:background .2s ease, border-color .2s ease; }
+  .nav-bar.is-scrolled { background:#0c2031; border-color:rgba(255,255,255,0.14); }
+
   /* Gallery filter tabs */
   .gal-tab { padding:8px 16px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;
              border:1px solid #dbe6ee;background:#fff;color:#5a7183;transition:all .15s ease; }
@@ -70,7 +75,7 @@
 <div style="width:100%;overflow-x:hidden">
 
   <nav style="position:fixed;top:16px;left:0;right:0;z-index:50;padding:0 16px">
-    <div style="max-width:1152px;margin:0 auto;border-radius:28px;background:rgba(255,255,255,0.10);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.22)">
+    <div class="nav-bar" style="max-width:1152px;margin:0 auto;border-radius:28px">
       <div style="display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 22px;gap:20px">
         <a href="#home" style="font-family:Archivo,sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:#fff">Skyway <span style="color:#8fd0f2">Cleaning</span></a>
         <ul style="display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0">
@@ -548,6 +553,17 @@
 
 <script>
   // ---- Dynamic behaviour (replaces the Claude Design DCLogic class) ----
+
+  // Nav bar: switch from translucent (over the hero) to solid navy once scrolled, so the white logo stays readable
+  (function () {
+    var navBar = document.querySelector('.nav-bar');
+    if (!navBar) return;
+    function updateNav() {
+      navBar.classList.toggle('is-scrolled', window.scrollY > 40);
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+  })();
 
   // Gallery filter tabs
   (function () {
