@@ -770,6 +770,9 @@
             form.reset();
             btn.textContent = "Thanks — we'll be in touch ✓";
             setStatus("Got it! Will or Rory will call you within 2 business hours.", false);
+            if (typeof gtag === 'function') {
+              gtag('event', 'conversion', { 'send_to': 'AW-18434846558/8_HRCM_d3fscEN7etdZE' });
+            }
           } else {
             btn.disabled = false;
             btn.style.opacity = '1';
