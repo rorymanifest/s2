@@ -1,7 +1,9 @@
 const { Resend } = require('resend');
 
 const NOTIFY_TO = [
-  'will@manifestdigital.com.au',];
+  'rory@manifestdigital.com.au',
+  'will@manifestdigital.com.au',
+];
 const FROM_ADDRESS = process.env.CONTACT_FROM_EMAIL || 'Skyway Cleaning <onboarding@resend.dev>';
 
 const MAX_LENGTHS = {
