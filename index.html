@@ -207,6 +207,10 @@
     .nav-links .nav-link:hover { background:rgba(255,255,255,0.08); }
   }
 
+  /* About Us photo gallery: hide the native scrollbar, arrows/dots drive it instead */
+  #about-track { scrollbar-width:none; -ms-overflow-style:none; }
+  #about-track::-webkit-scrollbar { display:none; }
+
   /* Gallery filter tabs */
   .gal-tab { padding:8px 16px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;
              border:1px solid #dbe6ee;background:#fff;color:#5a7183;transition:all .15s ease; }
@@ -353,33 +357,29 @@
           <p style="color:#5a7183;font-size:15px;line-height:1.7;margin:0;text-wrap:pretty">Rory runs the bookings, the pure-water gear and every ground-level clean — frames, tracks, sills, shopfronts and the occasional driveway pressure wash.</p>
         </div>
       </div>
-      <div style="margin-top:48px">
-        <div style="max-width:560px;margin:0 auto;position:relative">
-          <div style="position:relative;overflow:hidden;border-radius:26px;border:1px solid #dbe6ee;box-shadow:0 24px 60px -24px rgba(12,32,49,0.3)">
-            <div id="about-track" style="display:flex;transition:transform .4s ease">
-              <div class="about-slide" style="flex:0 0 100%;aspect-ratio:4/5;position:relative">
-                <img class="img-slot" src="images/about-pool-glass.jpg" alt="Will squeegeeing a glass pool-fence door at a Melbourne home">
-              </div>
-              <div class="about-slide" style="flex:0 0 100%;aspect-ratio:4/5;position:relative">
-                <img class="img-slot" src="images/about-glass-fence.jpg" alt="Will wiping down a glass pool fence panel">
-              </div>
-              <div class="about-slide" style="flex:0 0 100%;aspect-ratio:4/5;position:relative">
-                <img class="img-slot" src="images/about-highwindow.jpg" alt="Cleaning a high interior window from a ladder">
-              </div>
-              <div class="about-slide" style="flex:0 0 100%;aspect-ratio:4/5;position:relative">
-                <img class="img-slot" src="images/about-ladder.jpg" alt="Cleaning a high exterior window from a ladder">
-              </div>
-            </div>
+      <div style="margin-top:48px;position:relative">
+        <div id="about-track" style="display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 4px 12px">
+          <div class="about-slide" style="flex:0 0 calc((100% - 40px)/3);min-width:220px;scroll-snap-align:start;position:relative;border-radius:22px;overflow:hidden;border:1px solid #dbe6ee;aspect-ratio:4/5">
+            <img class="img-slot" src="images/about-1.jpg" alt="Will wiping down a glass pool fence panel">
           </div>
-          <button id="about-prev" type="button" aria-label="Previous photo" style="position:absolute;top:50%;left:12px;transform:translateY(-50%);width:40px;height:40px;border-radius:999px;border:none;background:rgba(255,255,255,0.9);color:#175b8c;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(12,32,49,0.3)">‹</button>
-          <button id="about-next" type="button" aria-label="Next photo" style="position:absolute;top:50%;right:12px;transform:translateY(-50%);width:40px;height:40px;border-radius:999px;border:none;background:rgba(255,255,255,0.9);color:#175b8c;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(12,32,49,0.3)">›</button>
+          <div class="about-slide" style="flex:0 0 calc((100% - 40px)/3);min-width:220px;scroll-snap-align:start;position:relative;border-radius:22px;overflow:hidden;border:1px solid #dbe6ee;aspect-ratio:4/5">
+            <img class="img-slot" src="images/about-2.jpg" alt="Cleaning a high interior window from a ladder">
+          </div>
+          <div class="about-slide" style="flex:0 0 calc((100% - 40px)/3);min-width:220px;scroll-snap-align:start;position:relative;border-radius:22px;overflow:hidden;border:1px solid #dbe6ee;aspect-ratio:4/5">
+            <img class="img-slot" src="images/about-3.jpg" alt="Cleaning a high exterior window from a ladder">
+          </div>
+          <div class="about-slide" style="flex:0 0 calc((100% - 40px)/3);min-width:220px;scroll-snap-align:start;position:relative;border-radius:22px;overflow:hidden;border:1px solid #dbe6ee;aspect-ratio:4/5">
+            <img class="img-slot" src="images/about-4.jpg" alt="Will squeegeeing a glass pool-fence door at a Melbourne home">
+          </div>
+          <div class="about-slide" style="flex:0 0 calc((100% - 40px)/3);min-width:220px;scroll-snap-align:start;position:relative;border-radius:22px;overflow:hidden;border:1px solid #dbe6ee;aspect-ratio:4/5">
+            <img class="img-slot" src="images/about-5.jpg" alt="Cleaning an upper-storey window from a ladder on the garage roof">
+          </div>
+          <div class="about-slide" style="flex:0 0 calc((100% - 40px)/3);min-width:220px;scroll-snap-align:start;position:relative;border-radius:22px;overflow:hidden;border:1px solid #dbe6ee;aspect-ratio:4/5">
+            <img class="img-slot" src="images/about-6.jpg" alt="Squeegeeing a high indoor window from a step ladder">
+          </div>
         </div>
-        <div id="about-dots" style="display:flex;justify-content:center;gap:8px;margin-top:20px">
-          <button class="about-dot" type="button" data-index="0" aria-label="Show photo 1" style="width:9px;height:9px;padding:0;border:none;border-radius:999px;background:#175b8c;cursor:pointer"></button>
-          <button class="about-dot" type="button" data-index="1" aria-label="Show photo 2" style="width:9px;height:9px;padding:0;border:none;border-radius:999px;background:#dbe6ee;cursor:pointer"></button>
-          <button class="about-dot" type="button" data-index="2" aria-label="Show photo 3" style="width:9px;height:9px;padding:0;border:none;border-radius:999px;background:#dbe6ee;cursor:pointer"></button>
-          <button class="about-dot" type="button" data-index="3" aria-label="Show photo 4" style="width:9px;height:9px;padding:0;border:none;border-radius:999px;background:#dbe6ee;cursor:pointer"></button>
-        </div>
+        <button id="about-prev" type="button" aria-label="Previous photos" style="position:absolute;top:50%;left:8px;transform:translateY(-50%);width:40px;height:40px;border-radius:999px;border:none;background:rgba(255,255,255,0.9);color:#175b8c;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(12,32,49,0.3);z-index:2">‹</button>
+        <button id="about-next" type="button" aria-label="Next photos" style="position:absolute;top:50%;right:8px;transform:translateY(-50%);width:40px;height:40px;border-radius:999px;border:none;background:rgba(255,255,255,0.9);color:#175b8c;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(12,32,49,0.3);z-index:2">›</button>
       </div>
     </div>
   </section>
@@ -845,42 +845,24 @@
     });
   })();
 
-  // About Us photo carousel: cycles through on-the-job photos of Will and Rory.
+  // About Us photo gallery: scrolls sideways through on-the-job photos, 3 at a time.
   (function () {
     var track = document.getElementById('about-track');
     if (!track) return;
     var slides = track.querySelectorAll('.about-slide');
-    var dots = document.querySelectorAll('.about-dot');
     var prevBtn = document.getElementById('about-prev');
     var nextBtn = document.getElementById('about-next');
-    var index = 0;
-    var timer;
 
-    function update() {
-      track.style.transform = 'translateX(-' + (index * 100) + '%)';
-      dots.forEach(function (dot, i) {
-        dot.style.background = i === index ? '#175b8c' : '#dbe6ee';
-      });
+    function step() {
+      return slides[1].offsetLeft - slides[0].offsetLeft;
     }
 
-    function goTo(i) {
-      index = (i + slides.length) % slides.length;
-      update();
-    }
-
-    function resetTimer() {
-      clearInterval(timer);
-      timer = setInterval(function () { goTo(index + 1); }, 5000);
-    }
-
-    prevBtn.addEventListener('click', function () { goTo(index - 1); resetTimer(); });
-    nextBtn.addEventListener('click', function () { goTo(index + 1); resetTimer(); });
-    dots.forEach(function (dot, i) {
-      dot.addEventListener('click', function () { goTo(i); resetTimer(); });
+    prevBtn.addEventListener('click', function () {
+      track.scrollBy({ left: -step(), behavior: 'smooth' });
     });
-
-    update();
-    resetTimer();
+    nextBtn.addEventListener('click', function () {
+      track.scrollBy({ left: step(), behavior: 'smooth' });
+    });
   })();
 
   // Reviews carousel: slides between two pages of five review cards.
