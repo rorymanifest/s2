@@ -353,6 +353,34 @@
           <p style="color:#5a7183;font-size:15px;line-height:1.7;margin:0;text-wrap:pretty">Rory runs the bookings, the pure-water gear and every ground-level clean — frames, tracks, sills, shopfronts and the occasional driveway pressure wash.</p>
         </div>
       </div>
+      <div style="margin-top:48px">
+        <div style="max-width:420px;margin:0 auto;position:relative;overflow:hidden;border-radius:26px;border:1px solid #dbe6ee;box-shadow:0 24px 60px -24px rgba(12,32,49,0.3)">
+          <div id="about-track" style="display:flex;transition:transform .4s ease">
+            <div class="about-slide" style="flex:0 0 100%;aspect-ratio:3/4;position:relative">
+              <img class="img-slot" src="images/about-pool-glass.jpg" alt="Will squeegeeing a glass pool-fence door at a Melbourne home">
+            </div>
+            <div class="about-slide" style="flex:0 0 100%;aspect-ratio:3/4;position:relative">
+              <img class="img-slot" src="images/about-glass-fence.jpg" alt="Will wiping down a glass pool fence panel">
+            </div>
+            <div class="about-slide" style="flex:0 0 100%;aspect-ratio:3/4;position:relative">
+              <img class="img-slot" src="images/about-highwindow.jpg" alt="Cleaning a high interior window from a ladder">
+            </div>
+            <div class="about-slide" style="flex:0 0 100%;aspect-ratio:3/4;position:relative">
+              <img class="img-slot" src="images/about-ladder.jpg" alt="Cleaning a high exterior window from a ladder">
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:center;align-items:center;gap:20px;margin-top:24px">
+          <button id="about-prev" type="button" aria-label="Previous photo" style="width:40px;height:40px;border-radius:999px;border:1px solid #dbe6ee;background:#fff;color:#175b8c;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">‹</button>
+          <div id="about-dots" style="display:flex;gap:8px">
+            <button class="about-dot" type="button" data-index="0" aria-label="Show photo 1" style="width:9px;height:9px;padding:0;border:none;border-radius:999px;background:#175b8c;cursor:pointer"></button>
+            <button class="about-dot" type="button" data-index="1" aria-label="Show photo 2" style="width:9px;height:9px;padding:0;border:none;border-radius:999px;background:#dbe6ee;cursor:pointer"></button>
+            <button class="about-dot" type="button" data-index="2" aria-label="Show photo 3" style="width:9px;height:9px;padding:0;border:none;border-radius:999px;background:#dbe6ee;cursor:pointer"></button>
+            <button class="about-dot" type="button" data-index="3" aria-label="Show photo 4" style="width:9px;height:9px;padding:0;border:none;border-radius:999px;background:#dbe6ee;cursor:pointer"></button>
+          </div>
+          <button id="about-next" type="button" aria-label="Next photo" style="width:40px;height:40px;border-radius:999px;border:1px solid #dbe6ee;background:#fff;color:#175b8c;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">›</button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -815,6 +843,44 @@
         });
       });
     });
+  })();
+
+  // About Us photo carousel: cycles through on-the-job photos of Will and Rory.
+  (function () {
+    var track = document.getElementById('about-track');
+    if (!track) return;
+    var slides = track.querySelectorAll('.about-slide');
+    var dots = document.querySelectorAll('.about-dot');
+    var prevBtn = document.getElementById('about-prev');
+    var nextBtn = document.getElementById('about-next');
+    var index = 0;
+    var timer;
+
+    function update() {
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      dots.forEach(function (dot, i) {
+        dot.style.background = i === index ? '#175b8c' : '#dbe6ee';
+      });
+    }
+
+    function goTo(i) {
+      index = (i + slides.length) % slides.length;
+      update();
+    }
+
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(function () { goTo(index + 1); }, 5000);
+    }
+
+    prevBtn.addEventListener('click', function () { goTo(index - 1); resetTimer(); });
+    nextBtn.addEventListener('click', function () { goTo(index + 1); resetTimer(); });
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { goTo(i); resetTimer(); });
+    });
+
+    update();
+    resetTimer();
   })();
 
   // Reviews carousel: slides between two pages of five review cards.
