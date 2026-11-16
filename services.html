@@ -46,7 +46,6 @@
             <li><a class="nav-link" href="/" style="font-size:15px;font-weight:500">Home</a></li>
             <li><a class="nav-link" href="/services" style="font-size:15px;font-weight:500" aria-current="page">Services</a></li>
             <li><a class="nav-link" href="/about" style="font-size:15px;font-weight:500">About Us</a></li>
-            <li><a class="nav-link" href="/our-work" style="font-size:15px;font-weight:500">Our Work</a></li>
             <li><a class="nav-link" href="/blog" style="font-size:15px;font-weight:500">Blog</a></li>
             <li><a class="nav-link" href="/contact" style="font-size:15px;font-weight:500">Contact Us</a></li>
           </ul>
@@ -58,65 +57,96 @@
     </div>
   </nav>
 
-  <section class="page-hero">
-    <div style="position:absolute;inset:0">
-      <img class="img-slot" src="/images/window.png" alt="Window cleaning in progress">
-    </div>
-    <div class="page-hero__shade"></div>
+  <section class="page-hero page-hero--plain">
     <div class="page-hero__fade"></div>
     <div class="page-hero__inner">
       <div style="max-width:720px">
         <span class="page-hero__eyebrow">Services</span>
         <h1 class="page-hero__title">Windows first, always</h1>
         <p class="page-hero__intro">Window cleaning is our craft — especially the glass that's hard to get to. We also take on pressure washing and gutter clearing when it suits the job.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:12px">
-          <a class="btn-primary" href="tel:0426666354" style="background:#3092cf;color:#fff;padding:16px 36px;border-radius:999px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;font-size:14px">Call 0426 666 354</a>
-          <a class="btn-ghost" href="/contact" style="border:1px solid rgba(255,255,255,0.5);color:#fff;padding:16px 32px;border-radius:999px;font-weight:500;font-size:14px;text-transform:uppercase;letter-spacing:0.06em">Get your quote</a>
-        </div>
       </div>
     </div>
   </section>
 
-  <section id="services" style="background:#f6fafc;padding:96px 24px">
+  <section id="services" style="background:#f6fafc;padding:32px 24px 96px">
     <div style="max-width:1152px;margin:0 auto">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:24px">
-        <a href="/contact" style="position:relative;border-radius:26px;overflow:hidden;border:1px solid #3092cf;box-shadow:0 20px 50px -20px rgba(48,146,207,0.45);display:block">
-          <div style="position:relative;height:420px">
-            <img class="img-slot" src="images/window.png" alt="Window cleaning in progress">
-            <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top, rgba(12,32,49,0.93) 0%, rgba(12,32,49,0.45) 45%, rgba(12,32,49,0) 80%)"></div>
-            <span style="position:absolute;top:16px;left:16px;background:#3092cf;color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;padding:6px 12px;border-radius:999px">Our speciality</span>
-            <div style="position:absolute;left:0;right:0;bottom:0;padding:24px">
-              <h3 style="font-family:Archivo,sans-serif;color:#fff;font-size:24px;font-weight:700;margin:0 0 8px">Window Cleaning</h3>
-              <p style="color:rgba(255,255,255,0.8);font-size:14px;line-height:1.6;margin:0 0 16px">Streak-free glass — including the panes nobody else can reach.</p>
-              <span style="display:inline-block;color:#fff;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;border-bottom:1px solid rgba(255,255,255,0.4);padding-bottom:2px">Learn more →</span>
-            </div>
-          </div>
-        </a>
-        <a href="/contact" style="position:relative;border-radius:26px;overflow:hidden;border:1px solid #dbe6ee;display:block">
-          <div style="position:relative;height:420px">
-            <img class="img-slot" src="images/blast.png" alt="Pressure washing a driveway">
-            <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top, rgba(12,32,49,0.93) 0%, rgba(12,32,49,0.45) 45%, rgba(12,32,49,0) 80%)"></div>
-            <div style="position:absolute;left:0;right:0;bottom:0;padding:24px">
-              <h3 style="font-family:Archivo,sans-serif;color:#fff;font-size:24px;font-weight:700;margin:0 0 8px">Pressure Washing</h3>
-              <p style="color:rgba(255,255,255,0.8);font-size:14px;line-height:1.6;margin:0 0 16px">Driveways, paths and exteriors back to their original colour.</p>
-              <span style="display:inline-block;color:#fff;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;border-bottom:1px solid rgba(255,255,255,0.4);padding-bottom:2px">Learn more →</span>
-            </div>
-          </div>
-        </a>
-        <a href="/contact" style="position:relative;border-radius:26px;overflow:hidden;border:1px solid #dbe6ee;display:block">
-          <div style="position:relative;height:420px">
-            <img class="img-slot" src="images/gutter.png" alt="Gutter cleaning on a roofline">
-            <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top, rgba(12,32,49,0.93) 0%, rgba(12,32,49,0.45) 45%, rgba(12,32,49,0) 80%)"></div>
-            <div style="position:absolute;left:0;right:0;bottom:0;padding:24px">
-              <h3 style="font-family:Archivo,sans-serif;color:#fff;font-size:24px;font-weight:700;margin:0 0 8px">Gutter Cleaning</h3>
-              <p style="color:rgba(255,255,255,0.8);font-size:14px;line-height:1.6;margin:0 0 16px">Cleared and flushed before the next downpour.</p>
-              <span style="display:inline-block;color:#fff;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;border-bottom:1px solid rgba(255,255,255,0.4);padding-bottom:2px">Learn more →</span>
-            </div>
-          </div>
-        </a>
+      <div style="text-align:center;margin-bottom:48px">
+        <span style="display:block;color:#175b8c;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:0.2em">What we do</span>
       </div>
-      <div style="margin-top:48px;text-align:center">
-        <a class="btn-primary" href="tel:0426666354" style="display:inline-block;background:#3092cf;color:#fff;padding:16px 36px;border-radius:999px;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:0.06em">Call 0426 666 354 for a quote</a>
+      <div class="svc-grid">
+      <article class="svc-card svc-card--featured">
+        <div class="svc-card__img">
+          <img class="img-slot" src="/images/window.png" alt="Window cleaning in progress with a squeegee" loading="lazy">
+          <span class="svc-card__badge">Our speciality</span>
+        </div>
+        <div class="svc-card__body">
+          <h3 class="svc-card__title">Window Cleaning</h3>
+          <p class="svc-card__desc">Glass inside and out with a streak-free, pure-water finish — plus screens, frames, sills and tracks on every visit.</p>
+        </div>
+      </article>
+      <article class="svc-card">
+        <div class="svc-card__img">
+          <img class="img-slot" src="/images/about-5.jpg" alt="Cleaning an upper-storey window from a ladder on the garage roof" loading="lazy">
+        </div>
+        <div class="svc-card__body">
+          <h3 class="svc-card__title">Second-Storey Windows</h3>
+          <p class="svc-card__desc">Upper-floor glass done properly, from water-fed pure-water poles to ladders on the garage roof.</p>
+        </div>
+      </article>
+      <article class="svc-card">
+        <div class="svc-card__img">
+          <img class="img-slot" src="/images/about-3.jpg" alt="Cleaning a high exterior window from a ladder" loading="lazy">
+        </div>
+        <div class="svc-card__body">
+          <h3 class="svc-card__title">Hard-to-Reach Glass</h3>
+          <p class="svc-card__desc">Stairwell glass, atrium panes, awkward balconies and anything over a drop — the windows other crews quote around.</p>
+        </div>
+      </article>
+      <article class="svc-card">
+        <div class="svc-card__img">
+          <img class="img-slot" src="/images/about-2.jpg" alt="Cleaning a high interior window from a ladder" loading="lazy">
+        </div>
+        <div class="svc-card__body">
+          <h3 class="svc-card__title">High Interior Windows</h3>
+          <p class="svc-card__desc">Raked ceilings, voids and skylights — the high indoor glass you can't get to yourself.</p>
+        </div>
+      </article>
+      <article class="svc-card">
+        <div class="svc-card__img">
+          <img class="img-slot" src="/images/about-4.jpg" alt="Squeegeeing a glass pool-fence door at a Melbourne home" loading="lazy">
+        </div>
+        <div class="svc-card__body">
+          <h3 class="svc-card__title">Glass Pool Fences</h3>
+          <p class="svc-card__desc">Pool fencing and glass balustrades brought back to clear, spot-free panels.</p>
+        </div>
+      </article>
+      <article class="svc-card">
+        <div class="svc-card__img">
+          <img class="img-slot" src="/images/window-after.jpg" alt="Clean window frames and glass" loading="lazy">
+        </div>
+        <div class="svc-card__body">
+          <h3 class="svc-card__title">Frames, Tracks &amp; Sills</h3>
+          <p class="svc-card__desc">Dust, cobwebs and grime cleared from frames, sills and sliding-door tracks — included with every window clean.</p>
+        </div>
+      </article>
+      <article class="svc-card">
+        <div class="svc-card__img">
+          <img class="img-slot" src="/images/blast.png" alt="Pressure washing a driveway" loading="lazy">
+        </div>
+        <div class="svc-card__body">
+          <h3 class="svc-card__title">Pressure Washing</h3>
+          <p class="svc-card__desc">Driveways, paths, render and roofs back to their original colour.</p>
+        </div>
+      </article>
+      <article class="svc-card">
+        <div class="svc-card__img">
+          <img class="img-slot" src="/images/gutter.png" alt="Gutter cleaning on a roofline" loading="lazy">
+        </div>
+        <div class="svc-card__body">
+          <h3 class="svc-card__title">Gutter Cleaning</h3>
+          <p class="svc-card__desc">Gutters cleared and flushed before the next downpour — easy to add on while we're up there.</p>
+        </div>
+      </article>
       </div>
     </div>
   </section>
