@@ -5,13 +5,6 @@ body { margin: 0; background: #f6fafc; font-family: "Public Sans", system-ui, sa
 a { color: #175b8c; text-decoration: none; transition: color .15s ease, background .15s ease; }
 .img-fill { width:100%; height:100%; object-fit:cover; display:block; background:#12354f; }
 
-/* Nav (same as privacy.html) */
-.nav-cta:hover  { background:rgba(255,255,255,0.28); color:#fff; }
-.nav-link       { color:rgba(255,255,255,0.85); }
-.nav-link:hover, .nav-link[aria-current] { color:#fff; }
-.blog-nav-links { display:flex; align-items:center; gap:26px; list-style:none; margin:0; padding:0; }
-@media (max-width:640px) { .blog-nav-links .nav-link { display:none; } }
-
 /* Blog list */
 .blog-wrap { max-width:1152px; margin:0 auto; padding:72px 24px 96px; }
 .eyebrow { color:#3092cf; font-weight:600; text-transform:uppercase; letter-spacing:0.14em; font-size:12px; margin:0 0 12px; }
